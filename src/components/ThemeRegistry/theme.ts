@@ -12,11 +12,14 @@ const theme = createTheme({
     primary :{
         main: '#235558',
         light: '#e7e7e7',
-        dark: '#0E0E0E',
+        dark: '#0E0E0E'
+    },
+    background: {
+      default: '#0E0E0E'
     },
   },  
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: 'Roboto',
   }
 });
 
