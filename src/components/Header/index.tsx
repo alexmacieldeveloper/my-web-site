@@ -41,7 +41,14 @@ export default function Header(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item} sx={{
+                ":hover": {
+                  textDecoration: 'underline',
+                  textDecorationColor: '#235558',
+                  textDecorationThickness: '4px',
+                  fontWeight: 700
+                }
+              }}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -54,7 +61,7 @@ export default function Header(props: Props) {
   return (
     <Box sx={{ display: 'flex', bgcolor: 'primary.dark' }}>
       <CssBaseline />
-      <AppBar sx={{ bgcolor: 'primary.dark'  }}>
+      <AppBar sx={{ bgcolor: 'primary.dark', boxShadow: 'none'}}>
         <Toolbar>
             <Typography
                 variant="h6"
@@ -101,7 +108,7 @@ export default function Header(props: Props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width:'100%', marginTop: '50px' },
           }}
         >
           {drawer}
