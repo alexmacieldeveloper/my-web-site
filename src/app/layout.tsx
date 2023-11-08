@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { Box } from '@mui/system';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry'
 import Header from '@/components/Header'
-
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +25,7 @@ export default function RootLayout({
           <Box>
             {children}
           </Box>
+          <Footer />
         </ThemeRegistry>
       </body>
     </html>
