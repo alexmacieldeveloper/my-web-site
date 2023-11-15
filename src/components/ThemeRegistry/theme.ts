@@ -1,11 +1,5 @@
-import { Oswald } from 'next/font/google';
-import { createTheme } from '@mui/material/styles';
 
-const oswald = Oswald({
-  weight: ['600'],
-  subsets: ['latin'],
-  display: 'swap',
-});
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
@@ -19,7 +13,7 @@ const theme = createTheme({
     },
   },  
   typography: {
-    fontFamily: oswald,
+    fontFamily: 'Arial',
   }
 });
 

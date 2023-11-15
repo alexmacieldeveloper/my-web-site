@@ -5,7 +5,11 @@ import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography';
 
 const listQualifications = ['HTML5', 'CSS', 'JavaScript', 'TypeScript', 'ReactJs', 'Git', 'Nextjs', 'Nodejs']
-export default function Qualifications(id:string) {
+type Props = {
+    id: string
+}
+export default function Qualifications(props: Props) {
+    const { id } = props;
     return (
         <Box sx={{ width: '100%', margin: '80px 0' }} id={id}>
             <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px'}}>Qualificações</Typography>
@@ -26,11 +30,6 @@ export default function Qualifications(id:string) {
                 )))}
             </Box>
             <Card sx={{ width: '136px', height: '136px', backgroundColor: '#727272', borderRadius: '50%', margin: '10px auto'}}>
-                <CardMedia
-                    sx={{ height: 128 }}
-                    image="/src/assets/profile1.png"
-                    title="me"
-                />
             </Card>
         </Box>
     )

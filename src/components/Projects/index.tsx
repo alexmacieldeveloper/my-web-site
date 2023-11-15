@@ -37,8 +37,13 @@ const Item = styled(Paper)(({ theme }) => ({
     borderRadius: '8px',
 }));
 
-export default function Projects(id:string) {
-    return (
+type Props = {
+  id: string
+} 
+
+export default function Projects(props: Props) {
+  const { id } = props;
+     return (
         <Box sx={{ width: '100%', marginBottom: '90px' }} id={id}>
             <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px'}}>Projetos</Typography>
             <Divider sx={{ backgroundColor: 'primary.main', height: '4px', width: '136px', borderRadius: '2px', margin: '0 auto'}} />
