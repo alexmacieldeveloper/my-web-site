@@ -51,17 +51,17 @@ export default function Header(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: '100%', color: 'primary.light' }} bgcolor='primary.dark'>
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.name} href={item.href} sx={{
-                ":hover": {
-                  textDecoration: 'underline',
-                  textDecorationColor: '#235558',
-                  textDecorationThickness: '4px',
-                  fontWeight: 700
-                }
-              }}/>
+        {navItems.map((item, index) => (
+          <ListItem disablePadding key={item.name}>
+            <ListItemButton sx={{ textAlign: 'center',
+              ":hover": {
+                textDecoration: 'underline',
+                textDecorationColor: '#235558',
+                textDecorationThickness: '4px',
+                fontWeight: 700
+              }
+            }} href={item.href}>
+              <ListItemText  primary={item.name}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,7 +95,7 @@ export default function Header(props: Props) {
  
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                <Button key={item} sx={{ fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal',
+                <Button key={item.name} sx={{ fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal',
                   ":hover": {
                       textDecoration: 'underline',
                       textDecorationColor: '#235558',

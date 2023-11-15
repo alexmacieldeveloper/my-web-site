@@ -9,11 +9,7 @@ export default function Me() {
     return (
         <Box sx={{ width: '100%', textAlign: 'center', margin: '100px 0' }}>
             <Card sx={{ width: '136px', height: '136px', backgroundColor: '#727272', borderRadius: '50%', margin: '0 auto'}}>
-                <CardMedia
-                    sx={{ height: 128 }}
-                    image="/src/assets/profile1.png"
-                    title="me"
-                />
+
             </Card>
             <Typography variant="h5" sx={{ color: "primary.light", fontSize: '24px', fontWeight: 800 }}>DESENVOLVEDOR</Typography>
             <Typography variant="h5" sx={{ color: "primary.light", fontSize: '20px', fontWeight: 500, letterSpacing: '19px' }}>CRIATIVO</Typography>
