@@ -17,8 +17,8 @@ export default function Qualifications(id:string) {
                     Minha principal ferramenta de trabalho é o JavaScript, uma linguagem que utilizo com maestria para criar sites interativos e dinâmicos que cativam os usuários.
                 </Typography>
 
-                {listQualifications.map((itens) => ((
-                    <Box sx={{ display: 'flex', margin: '16px 0'}}>
+                {listQualifications.map((itens, index) => ((
+                    <Box sx={{ display: 'flex', margin: '16px 0'}} key={index}>
                         <Typography sx={{ color: 'primary.light', fontSize: '10px', width: '26%'}}>{itens}</Typography>
                         <Divider sx={{ backgroundColor: 'primary.main', height: '6px', width: '52%', borderRadius: '2px'}} />
                         <Divider sx={{ backgroundColor: 'primary.light', height: '6px', width: '22%', borderRadius: '2px', margin: '0 auto'}} />
