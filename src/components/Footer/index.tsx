@@ -8,7 +8,7 @@ import { MdOutlineMailOutline } from 'react-icons/md';
 
 export default function Footer() {
     return (
-        <Box sx={{ display: { xs: 'block', sm: 'none', md: 'none', lg: 'none'}, position: 'absolute', bottom: 0, width: '100%', mb: '24px'}}>
+        <Box sx={{ display: { xs: 'block', sm: 'none', md: 'none', lg: 'none'}, position: 'fixed', bottom: 0, width: '100%', padding: '24px 0', backgroundColor: '#0E0E0E'}}>
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: '24px'}}>
                 <LuGithub color='#FDFDFD' size='1.5em' title='GitHub' />
                 <LuLinkedin color='#FDFDFD' size='1.5em' title='Linkedin' />

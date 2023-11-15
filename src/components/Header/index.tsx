@@ -25,7 +25,20 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Qualificações', 'Projetos', 'Contatos'];
+const navItems = [
+  {
+    name: 'Qualificações',     
+    href: '#qualifications'
+  },
+  {
+    name: 'Projetos',
+    href: '#projects' 
+  },
+  {
+    name: 'Contatos',
+    href: '#contacs'
+  }
+];
 
 export default function Header(props: Props) {
   const { window } = props;
@@ -41,7 +54,7 @@ export default function Header(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} sx={{
+              <ListItemText primary={item.name} href={item.href} sx={{
                 ":hover": {
                   textDecoration: 'underline',
                   textDecorationColor: '#235558',
@@ -89,8 +102,8 @@ export default function Header(props: Props) {
                       textDecorationThickness: '4px',
                       fontWeight: 700
                   }
-                }}>
-                    {item}
+                }} href={item.href}>
+                    {item.name}
                 </Button>
                 ))}
             </Box>

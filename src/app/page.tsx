@@ -1,11 +1,17 @@
 import { Box } from '@mui/system';
-import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container';
+
+import Me from '@/components/Me'
+import Qualifications from '@/components/Qualifications'
+import Projects from '@/components/Projects'
 
 
 export default function Home() {
   return (
-    <main>
-      <Typography color="primary.main">My Web-Site</Typography>
-    </main>
+    <Container>
+      <Me />
+      <Qualifications id="qualifications"/>
+      <Projects id="projects" />
+    </Container>
   )
 }

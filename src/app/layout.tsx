@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Box } from '@mui/system';
+import Container from '@mui/material/Container';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -22,9 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeRegistry>
           <Header />
-          <Box>
-            {children}
-          </Box>
+          {children}
           <Footer />
         </ThemeRegistry>
       </body>
