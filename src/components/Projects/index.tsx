@@ -43,8 +43,8 @@ export default function Projects(id:string) {
             <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px'}}>Projetos</Typography>
             <Divider sx={{ backgroundColor: 'primary.main', height: '4px', width: '136px', borderRadius: '2px', margin: '0 auto'}} />
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mt: '24px'}}>
-                {lists.map((list) => ((
-                    <Grid item xs={6}>
+                {lists.map((list, index) => ((
+                    <Grid item xs={6} key={index}>
                         <Item>
                             <Link href={list.site} target='_blank' underline="none" sx={{ color: 'primary.light', fontSize: '18px'}}>{list.name}</Link>
                         </Item>
