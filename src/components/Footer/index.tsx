@@ -15,7 +15,7 @@ export default function Footer() {
                 <Link href="https://github.com/alexmacieldeveloper/" target="_blank">
                     <LuGithub color='#FDFDFD' size='1.5em' title='GitHub' />
                 </Link>
-                <Link href="www.linkedin.com/in/alexmacieldeveloper" target="_blank">
+                <Link href="https://www.linkedin.com/in/alexmacieldeveloper/" target="_blank">
                     <LuLinkedin color='#FDFDFD' size='1.5em' title='Linkedin' />
                 </Link>
                 <Link href="https://wa.me/11952988030" target="_blank">
