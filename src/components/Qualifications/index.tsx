@@ -12,10 +12,10 @@ type Props = {
 export default function Qualifications(props: Props) {
     const { id } = props;
     return (
-        <Box sx={{ width: '100%', margin: '80px 0' }} id={id}>
-            <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px'}}>Qualificações</Typography>
-            <Divider sx={{ backgroundColor: 'primary.main', height: '4px', width: '136px', borderRadius: '2px', margin: '0 auto'}} />
-            <Box sx={{ marginTop: '24px'}}>
+        <Box sx={{ width: '100%', margin: '80px 0', display: { xs: 'block', sm: 'block', md: 'flex', lg: 'flex'} }} id={id}>
+            <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px', display: { xs: 'block', sm: 'none', md: 'none', lg: 'none'},}}>Qualificações</Typography>
+            <Divider sx={{ backgroundColor: 'primary.main', height: '4px', width: '136px', borderRadius: '2px', margin: '0 auto', display: { xs: 'block', sm: 'none', md: 'none', lg: 'none'}}} />
+            <Box sx={{ marginTop: '30px', width: { xs: '100%', sm: '100%', md: '60%', lg: '60%'}}}>
                 <Typography sx={{ color: 'primary.light', fontSize: '16px', fontWeight: 600, marginBottom: '16px'}}>DESENVOLVEDOR FRONT END</Typography>
                 <Typography sx={{ color: 'primary.light', fontSize: '16px', fontWeight: 100}}>Eu sou o Álex! 
                     Estou há mais de 3 anos na área de tecnologia, tenho acumulado mais de três anos de experiência dedicada a aprimorar interfaces e experiências na web. 
@@ -30,15 +30,17 @@ export default function Qualifications(props: Props) {
                     </Box>
                 )))}
             </Box>
-            <Card sx={{ width: '136px', height: '136px', backgroundColor: '#727272', borderRadius: '50%', margin: '10px auto'}}>
-                <Image 
-                    src="/profile2.png" 
-                    alt="me" 
-                    height={132}
-                    width={107}
-                    style={{ margin: '10px 20px'}}
-                />
-            </Card>
+            <Box sx={{width: { xs: '100%', sm: '100%', md: '40%', lg: '40%'}}}>
+                <Card sx={{ position: 'relative', width: { xs: '136px', sm: '136px', md: '64%', lg: '70%'}, height: { xs: '136px', sm: '136px', md: '50%', lg: '70%'}, backgroundColor: '#727272', borderRadius: '50%', margin: '10px auto'}}>
+                    <Image 
+                        fill
+                        src="/profile3.png" 
+                        alt="me" 
+                        sizes="(max-width: 768px) 107px"
+                        style={{ margin: { xs: '10px 20px', sm: '10px 20px', md:'10px 0px 0px 46    px', lg:'10px 0px 0px 46px'}}}
+                    />
+                </Card>
+            </Box>
         </Box>
     )
 }
