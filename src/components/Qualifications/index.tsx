@@ -35,9 +35,7 @@ export default function Qualifications(props: Props) {
                     <Image 
                         fill
                         src="/profile3.png" 
-                        alt="me" 
-                        sizes="(max-width: 768px) 107px"
-                        style={{ margin: { xs: '10px 20px', sm: '10px 20px', md:'10px 0px 0px 46    px', lg:'10px 0px 0px 46px'}}}
+                        alt="me"
                     />
                 </Card>
             </Box>
