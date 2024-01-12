@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardActions';
 import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography';
+import Image from 'next/image'
 
 const listQualifications = ['HTML5', 'CSS', 'JavaScript', 'TypeScript', 'ReactJs', 'Git', 'Nextjs', 'Nodejs']
 type Props = {
@@ -30,6 +31,13 @@ export default function Qualifications(props: Props) {
                 )))}
             </Box>
             <Card sx={{ width: '136px', height: '136px', backgroundColor: '#727272', borderRadius: '50%', margin: '10px auto'}}>
+                <Image 
+                    src="/profile2.png" 
+                    alt="me" 
+                    height={132}
+                    width={107}
+                    style={{ margin: '10px 20px'}}
+                />
             </Card>
         </Box>
     )
