@@ -52,13 +52,11 @@ export default function Header(props: Props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: '100%', color: 'primary.light' }} bgcolor='primary.dark'>
       <List>
         {navItems.map((item, index) => (
-          <ListItem disablePadding key={item.name}>
+          <ListItem disablePadding key={item.name} sx={{ margin: 'auto', width: '80%'}}>
             <ListItemButton sx={{ textAlign: 'center',
               ":hover": {
-                textDecoration: 'underline',
-                textDecorationColor: '#235558',
-                textDecorationThickness: '4px',
-                fontWeight: 700
+                backgroundColor: 'rgba(35, 85, 88, 0.5)',
+                border: '1px solid rgba(35, 85, 88, 1)'
               }
             }} href={item.href}>
               <ListItemText  primary={item.name}/>
@@ -95,12 +93,10 @@ export default function Header(props: Props) {
  
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                <Button key={item.name} sx={{ fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal',
+                <Button variant="outlined" key={item.name} sx={{ fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal', margin: '0 10px', border: 'none',
                   ":hover": {
-                      textDecoration: 'underline',
-                      textDecorationColor: '#235558',
-                      textDecorationThickness: '4px',
-                      fontWeight: 700
+                      backgroundColor: 'rgba(35, 85, 88, 0.5)',
+                      border: '1px solid rgba(35, 85, 88, 1)'
                   }
                 }} href={item.href}>
                     {item.name}
