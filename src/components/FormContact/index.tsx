@@ -7,7 +7,7 @@ import { Box, Button, TextField, Typography, CircularProgress } from '@mui/mater
 export const FormContact = () => {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const [loadingForm, setLoadingForm] = useState(false);
-console.log(form)
+
     interface ChangeEvent extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> {}
 
     const handleChange = (e: ChangeEvent) => {
