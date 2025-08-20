@@ -45,7 +45,7 @@ export default function Projects(props: Props) {
   const { id } = props;
      return (
         <Box sx={{ width: '100%', marginBottom: '90px' }} id={id}>
-            <Typography sx={{ color: 'primary.light', textAlign: 'center', fontSize: '18px'}}>Projetos</Typography>
+            <Typography variant='h4' sx={{ color: 'primary.light', textAlign: 'center'}}>Projetos</Typography>
             <Divider sx={{ backgroundColor: 'primary.main', height: '4px', width: '136px', borderRadius: '2px', margin: '0 auto'}} />
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ mt: '24px'}}>
                 {lists.map((list, index) => ((
