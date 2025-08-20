@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Me from '@/components/Me'
 import Qualifications from '@/components/Qualifications'
 import Projects from '@/components/Projects'
+import Contact from '@/components/Contact'
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Me />
       <Qualifications id="qualifications"/>
       <Projects id="projects" />
+      <Contact id="contacs"/>
     </Container>
   )
 }
