@@ -1,9 +1,6 @@
 "use client"
-import { useState } from 'react';
-import { Box, Button, TextField, Typography, CircularProgress } from '@mui/material';
+import { Box, Typography,  } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import axios from "axios";
-import { db } from '../../services/firebaseConfig'
 import { FormContact } from '../FormContact'
 
 type Props = {
