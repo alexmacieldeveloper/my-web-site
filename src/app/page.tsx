@@ -9,7 +9,7 @@ import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <Container>
+    <Container maxWidth="lg" sx={{ marginTop: '20px' }}>
       <Me />
       <Qualifications id="qualifications"/>
       <Projects id="projects" />

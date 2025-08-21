@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -27,12 +28,12 @@ interface Props {
 const drawerWidth = 240;
 const navItems = [
   {
-    name: 'Qualificações',     
+    name: 'Qualificações',
     href: '#qualifications'
   },
   {
     name: 'Projetos',
-    href: '#projects' 
+    href: '#projects'
   },
   {
     name: 'Contatos',
@@ -52,14 +53,15 @@ export default function Header(props: Props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: '100%', color: 'primary.light' }} bgcolor='primary.dark'>
       <List>
         {navItems.map((item, index) => (
-          <ListItem disablePadding key={item.name} sx={{ margin: 'auto', width: '80%'}}>
-            <ListItemButton sx={{ textAlign: 'center',
+          <ListItem disablePadding key={item.name} sx={{ margin: 'auto', width: '80%' }}>
+            <ListItemButton sx={{
+              textAlign: 'center',
               ":hover": {
                 backgroundColor: 'rgba(35, 85, 88, 0.5)',
                 border: '1px solid rgba(35, 85, 88, 1)'
               }
             }} href={item.href}>
-              <ListItemText  primary={item.name}/>
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -70,40 +72,43 @@ export default function Header(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', bgcolor: 'primary.dark' }}>
+    <Box sx={{ display: 'flex', bgcolor: 'primary.dark', padding: 0 }}>
       <CssBaseline />
-      <AppBar sx={{ bgcolor: 'primary.dark', boxShadow: 'none'}}>
-        <Toolbar>
+      <AppBar component="nav" position="fixed" sx={{ bgcolor: 'primary.dark', boxShadow: 'none', padding: '0' }}>
+        <Container maxWidth="lg">
+          <Toolbar sx={{paddingLeft:'0 !important', paddingRight: ' 0 !important'}}>
             <Typography
-                variant="h6"
-                component="div"
-                sx={{ flexGrow: 1, display: { sm: 'block'  }, fontSize: { sm: '20px', lg: '32px'}, lineHeight: 'normal', letterSpacing: { sm: '3.2px', lg: '5.12px'} }}
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: { sm: 'block' }, fontSize: { sm: '20px', lg: '32px' }, lineHeight: 'normal', letterSpacing: { sm: '3.2px', lg: '5.12px' } }}
             >
-                ÁLEX MACIEL
+              ÁLEX MACIEL
             </Typography>
             <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ display: { sm: 'none' } }}
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ display: { sm: 'none' } }}
             >
-                <MenuIcon />
+              <MenuIcon />
             </IconButton>
- 
+
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                {navItems.map((item) => (
-                <Button variant="outlined" key={item.name} sx={{ fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal', margin: '0 10px', border: 'none',
+              {navItems.map((item) => (
+                <Button variant="outlined" key={item.name} sx={{
+                  fontSize: '18px', color: '#FDFDFD', lineHeight: 'normal', margin: '0 10px', border: 'none',
                   ":hover": {
-                      backgroundColor: 'rgba(35, 85, 88, 0.5)',
-                      border: '1px solid rgba(35, 85, 88, 1)'
+                    backgroundColor: 'rgba(35, 85, 88, 0.5)',
+                    border: '1px solid rgba(35, 85, 88, 1)'
                   }
                 }} href={item.href}>
-                    {item.name}
+                  {item.name}
                 </Button>
-                ))}
+              ))}
             </Box>
-        </Toolbar>
+          </Toolbar>
+        </Container>
       </AppBar>
       <nav>
         <Drawer
@@ -117,7 +122,7 @@ export default function Header(props: Props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width:'100%', marginTop: '50px' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '100%', marginTop: '50px' },
           }}
         >
           {drawer}
